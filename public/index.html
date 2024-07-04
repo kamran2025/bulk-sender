@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Messenger</title>
+  <!-- Bootstrap Css  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body style="background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%); height: 100vh;">
+  <h1 class="bg-dark text-white py-4 text-center fs-3 mb-5 px-2">WhatsApp Bulk Message Sender</h1>
+  <div class="px-3">
+    <form id="uploadForm" enctype="multipart/form-data" class="mx-auto" style="max-width: 600px;">
+      <div>
+        <h6 class="bg-warning text-center rounded fw-bold py-2 mb-4">Note: Accept file formates :- csv , xlsx , pdf ,
+          txt only</h6>
+        <label for="csvfile" class="form-label fw-bold mb-0">Upload contact file:</label>
+        <input type="file" id="file" name="file" accept=".csv, .xlsx, .txt, .pdf" class="form-control" required>
+      </div>
+      <div>
+        <label for="message" class="form-label mt-4 fw-bold mb-0">Enter your message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here..."
+          class="form-control" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary mt-4 px-4 py-2">Upload and Send</button>
+    </form>
+    <div id="status" class="mx-auto fs-5 text-success mt-5 fw-bold" role="alert" style="max-width: 600px;">
+      <div class="d-none">
+        <h5 class="fs-5 text-dark fw-bold my-0 me-1">Message sending</h5>
+        <div class="spinner-grow text-primary align-self-end me-1" role="status" style="width: 8px; height: 8px;"></div>
+        <div class="spinner-grow text-success align-self-end me-1" role="status" style="width: 8px; height: 8px;"></div>
+        <div class="spinner-grow text-danger align-self-end me-1" role="status" style="width: 8px; height: 8px;"></div>
+        <div class="spinner-grow text-info align-self-end" role="status" style="width: 8px; height: 8px;"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap Css  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
